@@ -1,0 +1,261 @@
+body{
+    margin: 0;
+}
+
+
+header.title{
+    text-align: center;
+    font-size: 50px;
+}
+
+header.title span{
+    font-weight: 900;
+    color: brown;
+}
+.container{
+    margin-top: 20px;
+    display: flex;
+}
+.container_1{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box{
+    width: 30%;
+    background-color: #D5DBDB ;
+    margin-top: 10px; 
+    border-radius: 7px;
+    display: none;
+}
+.box_header{
+    display: flex;
+    height: 10vw;
+}
+img{
+    margin: 5px;
+    width: 50%;
+    height: 100%;
+}
+.box_title{
+    text-align: center;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #34495E ;
+    text-align: left;
+}
+.box_title span{
+    font-weight: 700;
+    color: #34495E ;
+    width: 100%;
+    display:block;
+}
+.border{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    border: 1px solid #B2BABB;
+    box-sizing: border-box;
+}
+.box_text{
+    margin-bottom: 20px;
+    color:#34495E;
+    margin-left: 5px;
+}
+
+.container_2{
+    margin-left: 20px;
+    width: 20%;
+    background-color:#D5DBDB ;
+}
+
+footer.inform{
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    display: none;
+}
+
+input#pie:checked ~ div.container_1 > div.box.pie {
+    display: block;
+}
+input#roll:checked ~ div.container_1 > div.box.roll {
+    display: block;
+}
+input#cheesecakes:checked ~ div.container_1 > div.box.cheesecakes {
+    display: block;
+}
+input#cake:checked ~ div.container_1 > div.box.cake {
+    display: block;
+}
+input#tort:checked ~ div.container_1 > div.box.tort {
+    display: block;
+}
+input#default:checked ~ div.container_1 > div.box {
+    display: block;
+}
+
+div.filter {
+    margin: 0;
+    padding: 0;
+}
+
+div.filter > label {
+    text-align: center;
+    width: 80%;
+    padding: 10px;
+    background-color: #b5b4b4;
+    margin: 10px 10% 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.filter_block {
+    width: 80%;
+    margin: 0 10% 20px;
+    position: relative;
+}
+
+.filter_cal {
+    height: 1px;
+}
+
+.filter_cal .line {
+    width: 100%;
+    border-top: 1px solid gray;
+    position: absolute;
+}
+
+.filter_cal .line.active {
+    margin-left: 20%;
+    margin-right: 40%;
+    width: 40%;
+    border-top: 1px solid blue;
+}
+
+.filter_cal .dot {
+    margin-left: calc(20% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    position: absolute;
+    margin-top: -5px;
+}
+
+.filter_cal .dot.finish {
+    margin-left: calc(60% - 5px);
+}
+
+.filter_block > h5 {
+    text-align: center;
+}
+
+.filter_block > h6 {
+    margin-left: 10px;
+}
+
+.container > .filter {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container > div.filter {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    div.filter > label {
+        margin: 5px;
+        min-width: 30%;
+        width: auto;
+        background: #c1c0c0;
+        padding: 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .box_header {
+        display: flex;
+        flex-direction: column;
+        height: 20vw;
+    }
+
+    .box_header img {
+        width: calc(100% - 10px);
+        height: 80%;
+        box-sizing: content-box;
+    }
+
+    .box .border,
+    .box .box_text {
+        display: none;
+    }
+
+    .container_2 {
+        display: none;
+    }
+
+    .container_1 {
+        width: 100%;
+    }
+
+    .box_title span {
+        display: inline;
+    }
+}
+
+@media (max-width: 730px) {
+    div.filter > label {
+        margin: 5px;
+        min-width:45%;
+        width: auto;
+        background: #c1c0c0;
+        padding: 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .box_header .box_title {
+        display: none;
+    }
+
+    .box_header img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px 15px;
+        border: 5px;
+        overflow: hidden;
+    }
+
+    .box_header {
+        height: auto;
+    }
+
+    footer.inform {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    footer .contact a {
+        display: block;
+    }
+}
